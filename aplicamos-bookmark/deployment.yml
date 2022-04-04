@@ -4,6 +4,9 @@ kind: Deployment
 metadata:
   name: aplicamos-bookmark
 spec:
+  selector:
+    matchLabels:
+      app: aplicamos-bookmark
   progressDeadlineSeconds: 300
   strategy:
     type: RollingUpdate

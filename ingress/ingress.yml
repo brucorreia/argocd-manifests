@@ -10,6 +10,7 @@ spec:
   tls:
   - hosts:
     - nginx.aplicamos.com.br
+    - aplicamos-bookmark.aplicamos.com.br
     secretName: letsencrypt-prod
   rules:
     - host: nginx.aplicamos.com.br
@@ -22,3 +23,14 @@ spec:
                 name: nginx-example
                 port:
                   number: 80
+    - host: aplicamos-bookmark.aplicamos.com.br
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: aplicamos-bookmark
+                port:
+                  number: 80
+

@@ -16,7 +16,6 @@ spec:
     - nginx.aplicamos.com.br
     - aplicamos-bookmark.aplicamos.com.br
     - aplicamos-crawl.aplicamos.com.br
-    - aplicamos-auth.aplicamos.com.br
     secretName: letsencrypt-prod
   rules:
     - host: nginx.aplicamos.com.br
@@ -47,15 +46,5 @@ spec:
             backend:
               service:
                 name: aplicamos-crawl
-                port:
-                  number: 80
-    - host: aplicamos-auth.aplicamos.com.br
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: aplicamos-auth
                 port:
                   number: 80

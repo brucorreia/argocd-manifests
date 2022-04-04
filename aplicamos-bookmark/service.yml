@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: aplicamos-bookmark
+  labels:
+    app: aplicamos-bookmark
+spec:
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+  selector:
+    app: aplicamos-bookmark
+

@@ -1,0 +1,44 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aplicamos-bookmark
+spec:
+  progressDeadlineSeconds: 300
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 10%
+  template:
+    metadata:
+      labels:
+        app: aplicamos-bookmark
+    spec:
+      containers:
+        - name: aplicamos-bookmark
+          image: brucorreia/aplicamos-bookmark:a10974cd068f3ab9776c3f0eef7180c5628061b5
+          envFrom:
+          - secretRef:
+              name: aplicamos-bookmark
+          ports:
+          - containerPort: 80
+            protocol: TCP
+          resources:
+            requests:
+              memory: "64M"
+              cpu: "64m"
+            limits:
+              memory: "128M"
+              cpu: "128m"
+          livenessProbe:
+            httpGet:
+              path: /healthcheck
+              port: 80
+            initialDelaySeconds: 5
+          readinessProbe:
+            httpGet:
+              path: /healthcheck
+              port: 80
+            initialDelaySeconds: 5
+      imagePullSecrets:
+      - name: regcred

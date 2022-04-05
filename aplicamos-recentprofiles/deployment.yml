@@ -1,0 +1,49 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/name: aplicamos-recentprofiles
+  name: aplicamos-recentprofiles
+spec:
+  selector:
+    matchLabels:
+      app: aplicamos-recentprofiles
+  progressDeadlineSeconds: 300
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 10%
+  template:
+    metadata:
+      labels:
+        app: aplicamos-recentprofiles
+    spec:
+      containers:
+        - name: aplicamos-recentprofiles
+          image: brucorreia/aplicamos-recentprofiles:5e3d61edf7b1f374feddaa98a92d392325fa4b4b
+          envFrom:
+          - secretRef:
+              name: aplicamos-recentprofiles
+          ports:
+          - containerPort: 80
+            protocol: TCP
+          resources:
+            requests:
+              memory: "64M"
+              cpu: "64m"
+            limits:
+              memory: "128M"
+              cpu: "128m"
+          livenessProbe:
+            httpGet:
+              path: /healthcheck
+              port: 80
+            initialDelaySeconds: 5
+          readinessProbe:
+            httpGet:
+              path: /healthcheck
+              port: 80
+            initialDelaySeconds: 5
+      imagePullSecrets:
+      - name: regcred

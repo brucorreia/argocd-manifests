@@ -20,7 +20,6 @@ spec:
     - aplicamos-recentprofiles.aplicamos.com.br
     - aplicamos-resumeregister.aplicamos.com.br
     - aplicamos-resumeregister-confirm.aplicamos.com.br
-    - aplicamos-resumeregister-consumer.aplicamos.com.br
     secretName: letsencrypt-prod
   rules:
     - host: nginx.aplicamos.com.br
@@ -92,15 +91,5 @@ spec:
               service:
                 name: aplicamos-resumeregister-confirm
                 port:
-                  number: 80
-    - host: aplicamos-resumeregister-consumer.aplicamos.com.br
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: aplicamos-resumeregister-consumer
-                port:
-                  number: 80                  
+                  number: 80           
 

@@ -1,0 +1,21 @@
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: blacktrader-email-generate
+spec:
+  schedule: "0 12 * * 1,2,3,4,5"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: blacktrader-email-generate
+            image: brucorreia/blacktrader-email-generate:a69aeea806af44ea80229e541b0a5ed80a204544
+            envFrom:
+            - secretRef:
+                name: blacktrader-email-generate
+            imagePullPolicy: IfNotPresent
+          restartPolicy: OnFailure
+          imagePullSecrets:
+          - name: registry

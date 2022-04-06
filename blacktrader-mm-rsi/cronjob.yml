@@ -1,0 +1,21 @@
+---
+apiVersion: batch/v1 
+kind: CronJob
+metadata:
+  name: blacktrader-mm-rsi
+spec:
+  schedule: "0 06 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: blacktrader-mm-rsi
+            image: brucorreia/blacktrader-mm-rsi:b81c81c6125efa62ec0f766c30afd1ba72e1b74a
+            envFrom:
+            - secretRef:
+                name: blacktrader-mm-rsi
+            imagePullPolicy: IfNotPresent
+          restartPolicy: OnFailure
+          imagePullSecrets:
+          - name: registry

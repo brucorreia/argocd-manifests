@@ -5,6 +5,8 @@ metadata:
 
 resources:
 - deployment.yml
+- hpa.yml
+- service.yml
 
 images:
 - name: aplicamos-auth

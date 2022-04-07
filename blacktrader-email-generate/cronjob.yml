@@ -18,4 +18,4 @@ spec:
             imagePullPolicy: IfNotPresent
           restartPolicy: OnFailure
           imagePullSecrets:
-          - name: registry
+          - name: regcred

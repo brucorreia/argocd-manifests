@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: aplicamos-auth
-          image: brucorreia/aplicamos-auth:f74dcdcad991789a851c6580caf8a547e3ee207d
+          image: aplicamos-auth
           envFrom:
           - secretRef:
               name: aplicamos-auth

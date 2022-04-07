@@ -1,7 +1,5 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-metadata:
-  name: aplicamos-auth
 
 resources:
 - deployment.yml
@@ -11,4 +9,4 @@ resources:
 images:
 - name: aplicamos-auth
   newName: brucorreia/aplicamos-auth
-  newTag: f74dcdcad991789a851c6580caf8a547e3ee207d
+  newTag: 62b37904eda7ed6d9019e3aa1dd2bc6cec352626

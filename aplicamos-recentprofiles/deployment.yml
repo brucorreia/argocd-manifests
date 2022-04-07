@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: aplicamos-recentprofiles
-          image: brucorreia/aplicamos-recentprofiles:5e3d61edf7b1f374feddaa98a92d392325fa4b4b
+          image: aplicamos-recentprofiles
           envFrom:
           - secretRef:
               name: aplicamos-recentprofiles

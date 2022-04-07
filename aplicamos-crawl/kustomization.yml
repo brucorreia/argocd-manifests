@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: aplicamos-crawl
+
+resources:
+- deployment.yml
+- hpa.yml
+- service.yml
+
+images:
+- name: aplicamos-crawl
+  newName: brucorreia/aplicamos-crawl
+  newTag: e2a25987d0a4cddd6d022d50b1e5bec01a325f1f

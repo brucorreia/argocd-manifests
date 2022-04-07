@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: aplicamos-bookmark
+
+resources:
+- deployment.yml
+- hpa.yml
+- service.yml
+
+images:
+- name: aplicamos-bookmark
+  newName: brucorreia/aplicamos-bookmark
+  newTag: a10974cd068f3ab9776c3f0eef7180c5628061b5

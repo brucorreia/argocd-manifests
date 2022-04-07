@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: aplicamos-resumeregister-confirm
+
+resources:
+- deployment.yml
+- hpa.yml
+- service.yml
+
+images:
+- name: aplicamos-resumeregister-confirm
+  newName: brucorreia/aplicamos-resumeregister-confirm
+  newTag: 3e8c7f182b0c4902bbb3b3f370009eda2d93a0b5

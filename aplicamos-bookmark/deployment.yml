@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: aplicamos-bookmark
-          image: brucorreia/aplicamos-bookmark:a10974cd068f3ab9776c3f0eef7180c5628061b5
+          image: aplicamos-bookmark
           envFrom:
           - secretRef:
               name: aplicamos-bookmark

@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: aplicamos-resumeregister-consumer
-          image: brucorreia/aplicamos-resumeregister-consumer:5c6b7891a725764edeba63924f20b8c26c01bde8
+          image: aplicamos-resumeregister-consumer
           envFrom:
           - secretRef:
               name: aplicamos-resumeregister-consumer

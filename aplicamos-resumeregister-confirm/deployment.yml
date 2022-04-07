@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: aplicamos-resumeregister-confirm
-          image: brucorreia/aplicamos-resumeregister-confirm:3e8c7f182b0c4902bbb3b3f370009eda2d93a0b5
+          image: aplicamos-resumeregister-confirm
           envFrom:
           - secretRef:
               name: aplicamos-resumeregister-confirm

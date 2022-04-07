@@ -9,4 +9,4 @@ resources:
 images:
 - name: aplicamos-auth
   newName: brucorreia/aplicamos-auth
-  newTag: 685796e0b1dd936a34aa1c7ca6ce1f438e0c4ad8
+  newTag: 16e23c09ce540f367712272810c546d180e28fe2

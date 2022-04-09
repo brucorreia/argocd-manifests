@@ -9,4 +9,4 @@ resources:
 images:
 - name: aplicamos-resumeregister
   newName: brucorreia/aplicamos-resumeregister
-  newTag: af767f93c1b6bf003b801d47c169638b54cc0069
+  newTag: 1daa7ac59c0edafa1cda2fcb2679db22219966f6

@@ -1,7 +1,5 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-metadata:
-  name: aplicamos-recentprofiles
 
 resources:
 - deployment.yml
@@ -11,4 +9,4 @@ resources:
 images:
 - name: aplicamos-recentprofiles
   newName: brucorreia/aplicamos-recentprofiles
-  newTag: 5e3d61edf7b1f374feddaa98a92d392325fa4b4b
+  newTag: 376a505ae5c2490bd42a46eb37af7851b08d6a58

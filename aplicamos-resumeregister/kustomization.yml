@@ -1,7 +1,5 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-metadata:
-  name: aplicamos-resumeregister
 
 resources:
 - deployment.yml
@@ -11,4 +9,4 @@ resources:
 images:
 - name: aplicamos-resumeregister
   newName: brucorreia/aplicamos-resumeregister
-  newTag: cddcfbc5a9ceab846aec6fa59106ee95a55bb442
+  newTag: af767f93c1b6bf003b801d47c169638b54cc0069

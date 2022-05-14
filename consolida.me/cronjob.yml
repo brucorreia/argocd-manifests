@@ -11,7 +11,7 @@ spec:
         spec:
           containers:
           - name: consolida.me
-            image: brucorreia/consolida.me:b81c81c6125efa62ec0f766c30afd1ba72e1b74a
+            image: consolida.me
             envFrom:
             - secretRef:
                 name: consolida.me

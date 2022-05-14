@@ -2,7 +2,7 @@
 apiVersion: batch/v1 
 kind: CronJob
 metadata:
-  name: consolida.me
+  name: consolidame
 spec:
   schedule: "0 06 * * *"
   jobTemplate:
@@ -10,8 +10,8 @@ spec:
       template:
         spec:
           containers:
-          - name: consolida.me
-            image: consolida.me
+          - name: consolidame
+            image: brucorreia/consolida.me:4be924d597ea8c98acdf561c445042d437e3cbf1
             envFrom:
             - secretRef:
                 name: consolida.me

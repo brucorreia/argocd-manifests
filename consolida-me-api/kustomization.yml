@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- deployment.yml
+- hpa.yml
+- service.yml
+
+images:
+- name: consolida-me-api
+  newName: brucorreia/consolida-me-api
+  newTag: b545eb71ceaabdbc5a79cba1f39920d53598e12f

@@ -20,6 +20,7 @@ spec:
     - aplicamos-recentprofiles.aplicamos.com.br
     - aplicamos-resumeregister.aplicamos.com.br
     - aplicamos-resumeregister-confirm.aplicamos.com.br
+    - consolida-me.aplicamos.com.br
     secretName: letsencrypt-prod
   rules:
     - host: nginx.aplicamos.com.br
@@ -92,4 +93,13 @@ spec:
                 name: aplicamos-resumeregister-confirm
                 port:
                   number: 80           
-
+    - host: consolida-me.aplicamos.com.br
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: consolida-me-api
+                port:
+                  number: 80           

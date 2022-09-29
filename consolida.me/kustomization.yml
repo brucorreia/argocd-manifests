@@ -7,4 +7,4 @@ resources:
 images:
 - name: consolida.me
   newName: brucorreia/consolida.me
-  newTag: 3aa8da89dc03cde506fceabc8d7304f8464ebb9a
+  newTag: 06a27c0a189c676d4982f6587c0217dc3e1a8421

@@ -9,4 +9,4 @@ resources:
 images:
 - name: consolida-me-api
   newName: brucorreia/consolida-me-api
-  newTag: 5902475e505533d7ee85eef22c30e910b1c95c03
+  newTag: 9ba6070f12c9c0d8a5c8729c5f645376d4c6abc3

@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: consolida-me-payments-api
+  labels:
+    app: consolida-me-payments-api
+spec:
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+  selector:
+    app: consolida-me-payments-api
+

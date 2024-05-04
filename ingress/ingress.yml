@@ -21,6 +21,7 @@ spec:
     - aplicamos-resumeregister.aplicamos.com.br
     - aplicamos-resumeregister-confirm.aplicamos.com.br
     - consolida-me.aplicamos.com.br
+    - consolida-me-payments.aplicamos.com.br
     secretName: letsencrypt-prod
   rules:
     - host: nginx.aplicamos.com.br

@@ -9,4 +9,4 @@ resources:
 images:
 - name: consolida-me-payments-api
   newName: brucorreia/consolida-me-payments-api
-  newTag: 315ef2dcd898173faccc3a09809e7cd1c2b74f89
+  newTag: 2863e3095fd39e1ae143f5da4e0c568b9425e5a9
